@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>cafe bestellen.nl</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="shortcut icon" type="image/png" href="img/logo.png">
+	</head>
+	<body>
+		<script>
+			//prijzen
+			const bier = 1.95;
+			const wijn = 3;
+			const fris = 2.50;
+			const bitterballen = 1.80;
+
+
+
+
+		//vragen?
+			var bestelling = prompt ('Welke bestelling wilt u toevoegen?(drankje of snack of stop:als je klaar bent met bestellen)');
+            myFunction();
+		
+
+
+          function myFunction() {
+          	if (bestelling == 'drankje') {
+				var drank = prompt ('Welk drankje wil je bier, wijn of fris');
+				var hoeveelD = prompt ('hoeveel wil je er?');
+				var anderD   = prompt ('wil je nog een ander drankje');
+			
+				if (anderD == 'nee' ) {
+					var bitterballen = prompt ('wil je bitterballen?');
+					if (bitterballen == 'ja') {
+						var hoeveelB = prompt('hoeveel wil je er?');
+
+					}
+				}
+			}
+		}
+	</script>
+	</body>
+</html>
