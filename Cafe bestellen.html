@@ -32,9 +32,13 @@
 				var drank = prompt ('Welk drankje wil je bier, wijn of fris');
 				var hoeveelD = prompt ('hoeveel wil je er?');
 				if (hoeveelD == '') { hoeveelD=0}
+				document.write (drank * hoeveelD + 0 +':totaalbitterballen<br>');
 				var anderD   = prompt ('wil je nog een ander drankje');
 			    if (anderD == 'ja') {
-			    Function2();
+			    Function3();
+			    if(anderD == 'nee'){
+			    	myFunction();
+			    }
            }
        }
           function myFunction() {
