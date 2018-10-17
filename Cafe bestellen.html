@@ -5,37 +5,59 @@
 		<link rel="shortcut icon" type="image/png" href="img/logo.png">
 	</head>
 	<body>
-		<script>
+		<script class = .A>
 			//prijzen
 			const bier = 1.95;
 			const wijn = 3;
 			const fris = 2.50;
 			const bitterballen = 1.80;
-
-
-
-
 		//vragen?
-			var bestelling = prompt ('Welke bestelling wilt u toevoegen?(drankje of snack of stop:als je klaar bent met bestellen)');
+			var bestelling = prompt ('Welke bestelling wilt u toevoegen?(drankje of snack of stop:als je niks wil bestellen)');
+            Function2();
             myFunction();
 		
 
-
-          function myFunction() {
-          	if (bestelling == 'drankje') {
+           function Function2() {
+           	if (bestelling == 'drankje') {
+           	    var drank = prompt ('Welk drankje wil je bier, wijn of fris');
+				var hoeveelD = prompt ('hoeveel wil je er?');
+				if (hoeveelD == '') { hoeveelD=0}
+				var anderD   = prompt ('wil je nog een ander drankje');
+			if (anderD == 'ja') {
+			    Function3();
+           }
+       }
+   }
+           function Function3(){
 				var drank = prompt ('Welk drankje wil je bier, wijn of fris');
 				var hoeveelD = prompt ('hoeveel wil je er?');
+				if (hoeveelD == '') { hoeveelD=0}
 				var anderD   = prompt ('wil je nog een ander drankje');
-			
-				if (anderD == 'nee' ) {
-					var bitterballen = prompt ('wil je bitterballen?');
-					if (bitterballen == 'ja') {
-						var hoeveelB = prompt('hoeveel wil je er?');
+			    if (anderD == 'ja') {
+			    Function2();
+           }
+       }
+          function myFunction() {
+				if (bestelling == 'snack' ) {
+					var Bitterballen = prompt ('wil je bitterballen?');
+					if (Bitterballen == 'ja') {
+						var hoeveelB = prompt('hoeveel wil je er?(8 of 16)');
+						if (hoeveelB == '') { hoeveelD=0}
+						var portie = prompt('hoeveel van de portie wil je?')
+					    if (hoeveelB == '') { hoeveelD=0}
+						var meer = prompt('wil je nog iets anders bestellen?')
+						if (meer == 'ja') {
+							Function2();
+							
 
 					}
 				}
 			}
+
+					document.write (bitterballen * hoeveelB + 0 +':totaalbitterballen<br>');
 		}
+					
+
 	</script>
 	</body>
 </html>
