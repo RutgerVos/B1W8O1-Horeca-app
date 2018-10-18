@@ -24,7 +24,12 @@
 				if (hoeveelD == '') { hoeveelD=0}
 				var anderD   = prompt ('wil je nog een ander drankje');
 			if (anderD == 'ja') {
+				document.write (drank*hoeveelD + 'drankje<br>');
 			    Function3();
+			    if (anderD == 'nee') {
+			   document.write (drank * hoeveelD + 'drankje<br>');
+               myFunction();
+			    }
            }
        }
    }
