@@ -16,7 +16,7 @@
 
 
            function Function2() {
-           	var bestelling = prompt ('Welke bestelling wilt u toevoegen?(drankje of snack of stop:als je niks wil bestellen)');
+           	var bestelling = prompt ('Welke bestelling wilt u toevoegen?(drankje of snack of stop: als je niet meer bestellen)');
            	if (bestelling == 'snack') {
            		 myFunction();
            	}
@@ -33,6 +33,7 @@
 			if (drank == 'fris') {
 			    document.write (fris*hoeveelD + 'frisTotaal<br>');
 			}
+			    var totaaldrankje = (bier*hoeveelD + fris*hoeveelD + wijn*hoeveelD);
 				var anderD   = prompt ('wil je nog iets anders bestellen?');
 			if (anderD == 'ja') {
 				Function2();
@@ -49,16 +50,15 @@
 						if (hoeveelB == '') { hoeveelD=0}
 						var portie = prompt('hoeveel van de portie wil je?')
 					    if (hoeveelB == '') { hoeveelD=0}
+					    	document.write (bitterballen*hoeveelB*portie + 'bitterballentotaal<br>');
 						var meer = prompt('wil je nog iets anders bestellen?')
 						if (meer == 'ja') {
-							document.write (bitterballen*hoeveelB*portie + 'bitterballentotaal<br>');
 							
 
 					}
 				}
 				Function2();
 			}
-		document.write()
 					
 
 	</script>
