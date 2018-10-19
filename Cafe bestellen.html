@@ -17,6 +17,9 @@
 
            function Function2() {
            	var bestelling = prompt ('Welke bestelling wilt u toevoegen?(drankje of snack of stop:als je niks wil bestellen)');
+           	if (bestelling == 'snack') {
+           		 myFunction();
+           	}
            	if (bestelling == 'drankje') {
            	    var drank = prompt ('Welk drankje wil je bier, wijn of fris');
 				var hoeveelD = prompt ('hoeveel wil je er?');
@@ -34,14 +37,12 @@
 			if (anderD == 'ja') {
 				Function2();
 			    if (anderD == 'nee') {
-               var totaaldrankje =(bier*hoeveelD + wijn*hoeveelD + fris*hoeveelD);
                document.write (totaaldrankje + 'Totaaldrankje<br>');
 			    }
            }
        }
    }
           function myFunction() {
-				if (bestelling == 'snack' ) {
 					var Bitterballen = prompt ('wil je bitterballen?');
 					if (Bitterballen == 'ja') {
 						var hoeveelB = prompt('hoeveel wil je er?(8 of 16)');
@@ -50,13 +51,14 @@
 					    if (hoeveelB == '') { hoeveelD=0}
 						var meer = prompt('wil je nog iets anders bestellen?')
 						if (meer == 'ja') {
-							Function2();
+							document.write (bitterballen*hoeveelB*portie + 'bitterballentotaal<br>');
 							
 
 					}
 				}
+				Function2();
 			}
-		}
+		document.write()
 					
 
 	</script>
