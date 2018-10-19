@@ -5,47 +5,41 @@
 		<link rel="shortcut icon" type="image/png" href="img/logo.png">
 	</head>
 	<body>
-		<script class = A>
+		<script>
 			//prijzen
 			const bier = 1.95;
 			const wijn = 3;
 			const fris = 2.50;
 			const bitterballen = 1.80;
-		//vragen?
-			var bestelling = prompt ('Welke bestelling wilt u toevoegen?(drankje of snack of stop:als je niks wil bestellen)');
-            Function2();
-            myFunction();
-		
+		//function globale
+		Function2();
+
 
            function Function2() {
+           	var bestelling = prompt ('Welke bestelling wilt u toevoegen?(drankje of snack of stop:als je niks wil bestellen)');
            	if (bestelling == 'drankje') {
            	    var drank = prompt ('Welk drankje wil je bier, wijn of fris');
 				var hoeveelD = prompt ('hoeveel wil je er?');
 				if (hoeveelD == '') { hoeveelD=0}
-				var anderD   = prompt ('wil je nog een ander drankje');
+			if (drank == 'bier') {
+				document.write (bier*hoeveelD + 'bierTotaal<br>');
+			}
+			if (drank == 'wijn') {
+			    document.write (wijn*hoeveelD + 'wijnTotaal<br>');
+			}
+			if (drank == 'fris') {
+			    document.write (fris*hoeveelD + 'frisTotaal<br>');
+			}
+				var anderD   = prompt ('wil je nog iets anders bestellen?');
 			if (anderD == 'ja') {
-				document.write (drank*hoeveelD + 'drankje<br>');
-			    Function3();
+				Function2();
 			    if (anderD == 'nee') {
-			   document.write (drank * hoeveelD + 'drankje<br>');
-               myFunction();
+               var totaaldrankje =(bier*hoeveelD + wijn*hoeveelD + fris*hoeveelD);
+               document.write (totaaldrankje + 'Totaaldrankje<br>');
 			    }
            }
        }
    }
-           function Function3(){
-				var drank = prompt ('Welk drankje wil je bier, wijn of fris');
-				var hoeveelD = prompt ('hoeveel wil je er?');
-				if (hoeveelD == '') { hoeveelD=0}
-				document.write (drank * hoeveelD + 0 +':totaalbitterballen<br>');
-				var anderD   = prompt ('wil je nog een ander drankje');
-			    if (anderD == 'ja') {
-			    Function3();
-			    if(anderD == 'nee'){
-			    	myFunction();
-			    }
-           }
-       }
           function myFunction() {
 				if (bestelling == 'snack' ) {
 					var Bitterballen = prompt ('wil je bitterballen?');
@@ -62,8 +56,6 @@
 					}
 				}
 			}
-
-					document.write (bitterballen * hoeveelB*portie + 0 +':totaalbitterballen<br>');
 		}
 					
 
