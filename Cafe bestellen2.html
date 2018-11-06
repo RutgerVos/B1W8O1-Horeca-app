@@ -11,10 +11,10 @@
 			const fris = 2.50;
 			const bitterballen = 1.80;
 		//function globale
-		function2();
+		Bestellingkiezen();
 
 
-           function function2() {
+           function Bestellingkiezen() {
            	var bestelling = prompt ('Welke bestelling wilt u toevoegen?(drankje of snack of stop: als je niet meer bestellen)');
            	if (bestelling == 'snack') {
            		 Bitterballenkeuzen();
@@ -35,14 +35,14 @@
 			    var totaaldrankje = (bier*hoeveelD + fris*hoeveelD + wijn*hoeveelD);
 				var anderD   = prompt ('wil je nog iets anders bestellen?');
 			if (anderD == 'ja') {
-				myfunction();
+				Bitterballenkeuzen();
 			    if (anderD == 'nee') {
                document.write (totaaldrankje + 'Totaaldrankje<br>');
 			    }
            }
        }
    }
-          function myfunction() {
+          function Bitterballenkeuzen() {
 					var Bitterballen = prompt ('wil je bitterballen?');
 					if (Bitterballen == 'ja') {
 						var hoeveelB = prompt('hoeveel wil je er?(8 of 16)');
@@ -56,7 +56,7 @@
 
 					}
 				}
-				function2();
+				Bestellingkiezen();
 			}
 					
 
