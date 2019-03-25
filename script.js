@@ -3,6 +3,9 @@ const bier = 1.95;
 const wijn = 3;
 const fris = 2.50;
 const bitterballen = 1.80;
+
+var totaalprijs = 0;
+
 //function globale
 Bestellingkiezen();
 
@@ -39,6 +42,7 @@ function Bestellingkiezen()
 			if (anderD == 'nee') 
 			{
 				document.write (totaaldrankje + 'Totaaldrankje<br>');
+				document.write (totaalprijs + totaaldrankje + 'Totaal<br>');
 			}
 		}
 	}
@@ -53,7 +57,14 @@ function Bitterballenkeuzen()
 		var portie = prompt('hoeveel van de portie wil je?')
 		if (hoeveelB == '') { hoeveelD=0}
 		document.write (bitterballen*hoeveelB*portie + 'bitterballentotaal<br>');
-		var meer = prompt('wil je nog iets anders bestellen?')
+		var meer = prompt('wil je nog iets anders bestellen?');
+		if (meer == 'nee') 
+		 {
+		 	document.write (totaalprijs + totaaldrankje + bitterballentotaal
+		 		+'Totaal<br>');
+
+		 }
+
 		
 	}
 	Bestellingkiezen();
